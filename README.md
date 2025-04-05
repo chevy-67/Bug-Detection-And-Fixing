@@ -12,7 +12,30 @@ A machine learning project that aims to automatically detect bugs in source code
 
 ## Project Structure
 
-Bug-Detection-And-Fixing/ ├── datasets/ # Sample or real code datasets ├── notebooks/ # Jupyter notebooks for training, analysis, etc. ├── scripts/ # Python scripts for preprocessing, training, inference ├── models/ # Trained model files ├── requirements.txt # Python dependencies ├── README.md # You are here └── .gitignore # Files to ignore in version control
+Bug-Detection-And-Fixing/
+├── data/                               
+│   ├── bugs.csv
+│   ├── bugs.json
+│   ├── cleaned_bugs.csv
+│   ├── cleaned_sstubs.csv
+│   ├── sstubs.csv
+│   └── sstubs.json
+│
+├── pretrained_model/                  
+│   └── codet5-base.ipynb               
+│
+├── bug_detection.py                    
+├── bug_fixer.py                        
+├── fine_ture_model.py                  
+├── load_dataset.py                    
+├── test_model.py                     
+├── train.json                          
+│
+├── README.md                          
+├── requirements.txt                    
+└── .gitignore                         
+
+
 
 
 ## Technologies Used

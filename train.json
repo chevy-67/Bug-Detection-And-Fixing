@@ -1,0 +1,30 @@
+{
+  "dataset": [
+    {
+      "bug_type": "Syntax Error",
+      "buggy_code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World\") // Missing semicolon\n  }\n}",
+      "fixed_code": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World\"); // Added semicolon\n  }\n}"
+    },
+    {
+      "bug_type": "Logical Error",
+      "buggy_code": "public class Main {\n  public static void main(String[] args) {\n    int x = 5;\n    if (x = 10) { // Assignment instead of comparison\n      System.out.println(\"X is 10\");\n    }\n  }\n}",
+      "fixed_code": "public class Main {\n  public static void main(String[] args) {\n    int x = 5;\n    if (x == 10) { // Corrected comparison operator\n      System.out.println(\"X is 10\");\n    }\n  }\n}"
+    },
+    {
+      "bug_type": "Runtime Error",
+      "buggy_code": "public class Main {\n  public static void main(String[] args) {\n    String str = null;\n    System.out.println(str.length()); // NullPointerException\n  }\n}",
+      "fixed_code": "public class Main {\n  public static void main(String[] args) {\n    String str = null;\n    if (str != null) { // Added null check\n      System.out.println(str.length());\n    } else {\n      System.out.println(\"String is null\");\n    }\n  }\n}"
+    },
+    {
+      "bug_type": "Performance Issue",
+      "buggy_code": "public class Main {\n  public static void main(String[] args) {\n    int sum = 0;\n    for (int i = 0; i < 1000000; i++) {\n      sum += i; // Inefficient computation\n    }\n    System.out.println(sum);\n  }\n}",
+      "fixed_code": "public class Main {\n  public static void main(String[] args) {\n    long sum = (long) (999999 * 1000000) / 2; // Used arithmetic formula for sum of n numbers\n    System.out.println(sum);\n  }\n}"
+    },
+    {
+      "bug_type": "Security Vulnerability",
+      "buggy_code": "import java.sql.*;\npublic class Main {\n  public static void main(String[] args) {\n    String userInput = \"admin\";\n    String query = \"SELECT * FROM users WHERE username = '\" + userInput + \"'\"; // SQL Injection Risk\n    System.out.println(query);\n  }\n}",
+      "fixed_code": "import java.sql.*;\npublic class Main {\n  public static void main(String[] args) {\n    String userInput = \"admin\";\n    String query = \"SELECT * FROM users WHERE username = ?\"; // Used PreparedStatement\n    System.out.println(query);\n  }\n}"
+    }
+  ]
+}
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BugFixer Pro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+    }
+    .header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .badge {
+      background-color: #10b981;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .content {
+      background-color: white;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .textarea {
+      width: 100%;
+      height: 160px;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: monospace;
+    }
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn.analyze {
+      background-color: #2563eb;
+      color: white;
+      margin-right: 10px;
+    }
+    .btn.clear {
+      background-color: #ef4444;
+      color: white;
+    }
+    .placeholder-box {
+      border: 2px dashed #d1d5db;
+      padding: 30px;
+      text-align: center;
+      color: #6b7280;
+      border-radius: 8px;
+    }
+    .summary {
+      margin-top: 30px;
+    }
+    .summary-icon {
+      vertical-align: middle;
+      margin-right: 8px;
+      color: #6b7280;
+    }
+    .results-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>BugFixer Pro</h1>
+    </div>
+    <div class="content">
+      <div class="grid">
+        
+        <div class="card">
+          <h2>Paste Your Python Code</h2>
+          <textarea class="textarea" placeholder="Enter or paste Python code..."></textarea>
+          <button class="btn analyze">Analyze</button>
+          <button class="btn clear">Clear</button>
+        </div>
+
+        
+        <div class="card">
+          <h2>Analysis Result</h2>
+          <div class="placeholder-box">
+            <span>&#8505;</span><br/>
+            No analysis yet. Paste your code and click Analyze.
+          </div>
+          <div class="results-footer">
+            <span>Lines: 0</span>
+            <span>Errors: 0</span>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="summary">
+        <h2>Summary</h2>
+        <p><span class="summary-icon">&#8505;</span>No analysis yet. Paste your code and dck Analyze.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

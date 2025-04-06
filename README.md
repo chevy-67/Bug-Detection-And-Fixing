@@ -53,3 +53,26 @@ Bug-Detection-And-Fixing/
 ```bash
 git clone https://github.com/chevy-67/Bug-Detection-And-Fixing.git
 cd Bug-Detection-And-Fixing
+```
+
+### 2. Create virtual environment and activate
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+### 3. Install required dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the FastAPI app
+```bash
+uvicorn main:app --reload
+```
+
+### 5. Access API
+Visit: http://127.0.0.1:8000/docs
+
+### 6. Frontend
+Open `index.html` in a web browser for the UI.

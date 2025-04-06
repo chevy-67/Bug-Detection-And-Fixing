@@ -42,7 +42,7 @@ Bug-Detection-And-Fixing/
 
 - Python
 - Scikit-learn
-- TensorFlow / Keras (if applicable)
+- TensorFlow / Keras
 - Pandas, NumPy
 - Jupyter Notebooks
 - GitHub for version control
